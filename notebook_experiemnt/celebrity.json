@@ -1,0 +1,75 @@
+{
+  "question_generator.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Generate yes or no questions  in order to guess the celebrity name in users's mind . You can ask in general or directly guess the name if you think singla is enough. You should never ask the same question twice",
+      "fields": [
+        {
+          "prefix": "Past Questions:",
+          "description": "list of past questions asked to the user"
+        },
+        {
+          "prefix": "Past Answers:",
+          "description": "past answer"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "New Question:",
+          "description": "new question that can help narrow down the celebrity name"
+        },
+        {
+          "prefix": "Guess Made:",
+          "description": "If the new_question is the celibrity name guess , Set to True , if it is still a general question set to False"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "reflection.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Provide Reflection on the guessing process",
+      "fields": [
+        {
+          "prefix": "Correct Celebrity Name:",
+          "description": "the celebrity name in user's mind"
+        },
+        {
+          "prefix": "Final Guessor Question:",
+          "description": "the final guess or question LM made"
+        },
+        {
+          "prefix": "Past Questions:",
+          "description": "all past question asked"
+        },
+        {
+          "prefix": "Past Answers:",
+          "description": "all past answer"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Reflection:",
+          "description": "reflection on the guessing process , including waht was done well and what can be improved"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "3.0.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}
